@@ -1,0 +1,15 @@
+ Scanner scanner = new Scanner(System.in);
+        long a = scanner.nextLong();
+        long b = scanner.nextLong();
+        if (a <= 0 || b <= 0) {
+            try {
+                throw new Exception("Breadth and height must be positive");
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        else {
+            System.out.println(a * b);
+        }
+    }
+}
