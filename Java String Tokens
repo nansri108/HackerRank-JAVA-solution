@@ -1,0 +1,13 @@
+public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine().trim();
+        String[] sSplit = s.split("[^A-Za-z]+");
+        if (s.isEmpty()) {
+            System.out.println(0);
+        } else {
+            System.out.println(sSplit.length);
+            Arrays.stream(sSplit).forEach(System.out::println);
+        }
+        scan.close();
+    }
+}
