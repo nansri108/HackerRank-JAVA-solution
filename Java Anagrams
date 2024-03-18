@@ -1,0 +1,18 @@
+char[] c_a = a.toLowerCase().toCharArray();
+        char[] c_b = b.toLowerCase().toCharArray();
+        int count = 0;
+        if (a.length() == b.length()) {
+            for (int i = 0; i < a.length(); i++) {
+                for (int j = 0; j < b.length(); j++) {
+                    if (c_a[i] == c_b[j]) {
+                        count++;
+                        c_a[i] = ' ';
+                        c_b[j] = ' ';
+                        break;
+                    }
+                }
+            }
+            if (count == a.length()) return true;
+        }
+        return false;
+    }
