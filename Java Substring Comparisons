@@ -1,0 +1,25 @@
+ smallest = s.substring(0,k);
+     largest = s.substring(0,k);
+
+    int star = 0;
+
+    while(k < s.length()+1){
+
+        String cons = s.substring(star, k);
+
+        if(cons.compareTo(largest) > 0){
+            largest = cons;
+
+        }
+
+        if(cons.compareTo(smallest) < 0){
+            smallest = cons;
+        }
+
+        star++;
+        k++;
+    }
+
+
+    return smallest + "\n" + largest;
+}
